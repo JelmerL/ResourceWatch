@@ -1,0 +1,76 @@
+
+### find datasets earthquake
+
+curl -X GET https://api.resourcewatch.org/v1/dataset?search=earthquake
+
+###
+
+curl -X POST https://api.resourcewatch.org/v1/dataset/find-by-ids \
+-H "Content-Type: application/json"  -d \
+'{
+    "ids": [
+        "13f4e065-b579-41f0-938d-b97c9dd54ce2",
+        "ab6216ee-9a2b-412f-b538-8644d5834c7a",
+        "6a22c67d-9e3c-4f8c-94d2-d90fe886b476",
+        "4919be3a-c543-4964-a224-83ef801370de",
+        "609487de-0a23-4783-bafc-4335b6fe7d4b",
+        "43f1a6e3-213e-432c-aac1-58dfe9dc3ed9",
+        "14e37a6e-816a-4eb4-91fd-1467ab2305af",
+        "d39919a9-0940-4038-87ac-662f944bc846",
+        "df9ef304-672f-4c17-97f4-f9f8fa2849ff",
+        "1616a329-1bf0-4a45-992f-3087b76c232e",
+        "c53a195f-d5f0-4acc-b1be-b773420a6606"
+    ]
+}'
+
+
+###
+curl -X POST https://api.resourcewatch.org/v1/dataset/find-by-ids \
+-H "Content-Type: application/json"  -d \
+'{
+    "ids": [
+        "6a22c67d-9e3c-4f8c-94d2-d90fe886b476",
+        "f31dece0-9256-428a-84de-3a59f5c06bb7",
+        "4a3f2c5b-1fe3-4707-82b5-2bb25d66fb52",
+        "82d19d37-21fe-47a9-964d-75dee7aac318",
+        "db0c03d3-02fd-472b-90c5-355a10a5f141",
+        "d39919a9-0940-4038-87ac-662f944bc846",
+        "ff1425a9-4793-4ac2-99e5-7bdf87114cc7",
+        "e4946b37-ac8f-48f7-9498-dee5ab23db68"
+]
+}'
+
+### Earthquake
+curl -X GET https://api.resourcewatch.org/v1/dataset/1d7085f7-11c7-4eaf-a29a-5a4de57d010e
+### Earthquake
+curl -X GET https://api.resourcewatch.org/v1/dataset/1d7085f7-11c7-4eaf-a29a-5a4de57d010e/layer
+
+
+
+
+
+
+
+### find dataset for sea level rise
+
+curl -X GET https://api.resourcewatch.org/v1/dataset/ff1425a9-4793-4ac2-99e5-7bdf87114cc7
+
+### get all layers in dataset
+curl -X GET "https://api.resourcewatch.org/v1/dataset/ff1425a9-4793-4ac2-99e5-7bdf87114cc7/layer"
+
+### Get all fields in dataset
+curl -X GET https://api.resourcewatch.org/v1/fields/ff1425a9-4793-4ac2-99e5-7bdf87114cc7
+
+### get all columns from dataset
+curl -i -X GET "https://api.resourcewatch.org/v1/query/ff1425a9-4793-4ac2-99e5-7bdf87114cc7?sql=SELECT * FROM projects/resource-watch-gee/cli_024_sea_level_rise_meter index LIMIT 5"
+
+### get all solumns query different syntax
+
+curl -i -X GET "https://api.resourcewatch.org/v1/query?sql=SELECT * FROM ff1425a9-4793-4ac2-99e5-7bdf87114cc7 index LIMIT 5"
+
+###
+curl -i -X GET https://api.resourcewatch.org/v1/dataset/ff1425a9-4793-4ac2-99e5-7bdf87114cc7/?includes=layer,metadata
+
+### widgets for dataset
+
+curl -X GET "https://api.resourcewatch.org/v1/dataset/ff1425a9-4793-4ac2-99e5-7bdf87114cc7/widget"
