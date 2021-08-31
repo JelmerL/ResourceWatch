@@ -39,14 +39,14 @@ curl -X POST https://api.resourcewatch.org/v1/dataset/find-by-ids \
         "e4946b37-ac8f-48f7-9498-dee5ab23db68"
 ]
 }'
-### anomaly
+### Get Dataset
 curl -X GET https://api.resourcewatch.org/v1/dataset/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05
 
 ### get all layers in dataset
 curl -X GET "https://api.resourcewatch.org/v1/dataset/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05/layer"
 
 ### get all columns from dataset
-curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT last(b1) as x FROM users/resourcewatch_wri/cli_035_surface_temp_analysis where time_start >=1533448800000 LIMIT 5'
+curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT * FROM users/resourcewatch_wri/cli_035_surface_temp_analysis'
 
 ###
 curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT last(b1) as x FROM users/resourcewatch_wri/cli_035_surface_temp_analysis LIMIT 5'
@@ -57,13 +57,8 @@ curl -i -X GET https://api.resourcewatch.org/v1/dataset/0df6dbcd-ee6a-401b-bf1d-
 ###
 curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT last(b1) as x from users/resourcewatch_wri/cli_035_surface_temp_analysis where time_start >= 1533448800000 and ST_INTERSECTS(ST_SetSRID(ST_GeomFromGeoJSON('{\"type\":\"Point\",\"coordinates\":[{{6.372070}},{{50.261254}}]}'),4326),the_geom)'
 
-
-
-
-### Earthquake
-curl -X GET https://api.resourcewatch.org/v1/dataset/1d7085f7-11c7-4eaf-a29a-5a4de57d010e
-### Earthquake
-curl -X GET https://api.resourcewatch.org/v1/dataset/1d7085f7-11c7-4eaf-a29a-5a4de57d010e/layer
+### 
+curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=select last(b1) as x from 'users/resourcewatch_wri/cli_035_surface_temp_analysis' where time_start >= 1533448800000 and ST_INTERSECTS(ST_SetSRID(ST_GeomFromGeoJSON('{\"type\":\"Point\",\"coordinates\":[{{6.372070}},{{50.261254}}]}'),4326),the_geom)'
 
 
 
