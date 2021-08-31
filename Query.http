@@ -89,3 +89,7 @@ curl -i -X GET https://api.resourcewatch.org/v1/dataset/ff1425a9-4793-4ac2-99e5-
 ### widgets for dataset
 
 curl -X GET "https://api.resourcewatch.org/v1/dataset/ff1425a9-4793-4ac2-99e5-7bdf87114cc7/widget"
+
+
+###
+http://api.resourcewatch.org/v1/query/?sql=SELECT SUM(umd_tree_cover_loss__ha) AS total_loss FROM a4d92f66-83f4-40f9-9d70-17297ef90e63 WHERE wdpa_protected_area__iso='BRA' AND umd_tree_cover_loss__year=2015 AND umd_tree_cover_density__threshold=30
