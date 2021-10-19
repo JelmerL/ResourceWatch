@@ -55,10 +55,10 @@ curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2
 curl -i -X GET https://api.resourcewatch.org/v1/dataset/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05/?includes=layer,metadata
 
 ###
-curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT last(b1) as x from users/resourcewatch_wri/cli_035_surface_temp_analysis where time_start >= 1533448800000 and ST_INTERSECTS(ST_SetSRID(ST_GeomFromGeoJSON('{\"type\":\"Point\",\"coordinates\":[{{6.372070}},{{50.261254}}]}'),4326),the_geom)'
+curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT last(b1) as x from users/resourcewatch_wri/cli_035_surface_temp_analysis where time_start >= 1533448800000 and ST_INTERSECTS(ST_SetSRID(ST_GeomFromGeoJSON('{\"type\":\"Point\",\"coordinates\":[{{}},{{}}]}'),4326),the_geom)'
 
 ### 
-curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=select last(b1) as x from 'users/resourcewatch_wri/cli_035_surface_temp_analysis' where time_start >= 1533448800000 and ST_INTERSECTS(ST_SetSRID(ST_GeomFromGeoJSON('{\"type\":\"Point\",\"coordinates\":[{{6.372070}},{{50.261254}}]}'),4326),the_geom)'
+curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=select last(b1) as x from 'users/resourcewatch_wri/cli_035_surface_temp_analysis' where time_start >= 1533448800000 and ST_INTERSECTS(ST_SetSRID(ST_GeomFromGeoJSON('{\"type\":\"Point\",\"coordinates\":[{{}},{{}}]}'),4326),the_geom)'
 
 
 
