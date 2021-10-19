@@ -1,7 +1,7 @@
 
 ### find datasets earthquake
 
-curl -X GET https://api.resourcewatch.org/v1/dataset?search=anomaly
+curl -X GET https://api.resourcewatch.org/v1/dataset?search=climate
 
 ###
 
