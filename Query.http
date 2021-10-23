@@ -1,7 +1,7 @@
 
 ### find datasets earthquake
 
-curl -X GET https://api.resourcewatch.org/v1/dataset?search=climate
+curl -X GET https://api.resourcewatch.org/v1/dataset?search=footprint
 
 ###
 
@@ -40,13 +40,21 @@ curl -X POST https://api.resourcewatch.org/v1/dataset/find-by-ids \
 ]
 }'
 ### Get Dataset
-curl -X GET https://api.resourcewatch.org/v1/dataset/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05
+curl -X GET https://api.resourcewatch.org/v1/dataset/702f4bcb-c376-49b6-9345-cdc8aa989582
+
+
+###
+curl -X GET https://api.resourcewatch.org/v1/dataset/702f4bcb-c376-49b6-9345-cdc8aa989582?sql=SELECT * from 'foo_046b_food_footprint_calories_wrrupdate'
+
+
+
+
 
 ### get all layers in dataset
-curl -X GET "https://api.resourcewatch.org/v1/dataset/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05/layer"
+curl -X GET "https://api.resourcewatch.org/v1/dataset/702f4bcb-c376-49b6-9345-cdc8aa989582/layer"
 
 ### get all columns from dataset
-curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT * FROM users/resourcewatch_wri/cli_035_surface_temp_analysis'
+curl -i -X GET 'https://api.resourcewatch.org/v1/query/702f4bcb-c376-49b6-9345-cdc8aa989582'
 
 ###
 curl -i -X GET 'https://api.resourcewatch.org/v1/query/0df6dbcd-ee6a-401b-bf1d-2a67dad09f05?sql=SELECT last(b1) as x FROM users/resourcewatch_wri/cli_035_surface_temp_analysis LIMIT 5'
