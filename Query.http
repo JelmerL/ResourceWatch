@@ -1,7 +1,7 @@
 
 ### find datasets earthquake
 
-curl -X GET https://api.resourcewatch.org/v1/dataset?search=footprint
+curl -X GET https://api.resourcewatch.org/v1/dataset?search=mauna
 
 ###
 
@@ -44,8 +44,17 @@ curl -X GET https://api.resourcewatch.org/v1/dataset/702f4bcb-c376-49b6-9345-cdc
 
 
 ###
+curl -X GET https://api.resourcewatch.org/v1/dataset/c1a22e2e-6b78-4ccd-b249-77ab0bd58bdd
+
+###
+curl -X GET 'https://api.resourcewatch.org/v1/download/c1a22e2e-6b78-4ccd-b249-77ab0bd58bdd?sql=SELECT date,average from cli_045_carbon_dioxide_concentration&format=json'
+
+
+###
 curl -X GET https://api.resourcewatch.org/v1/dataset/702f4bcb-c376-49b6-9345-cdc8aa989582?sql=SELECT * from 'foo_046b_food_footprint_calories_wrrupdate'
 
+###
+curl -X GET 'https://api.resourcewatch.org/v1/download/702f4bcb-c376-49b6-9345-cdc8aa989582?sql=SELECT food_type,total_ghg_emissions_co2e_per_million_kilocalories_consumed from foo_046b_food_footprint_calories_wrrupdate&format=json'
 
 
 
